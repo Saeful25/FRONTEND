@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.container {
+  background-color: #fff;
+  font-family: 'Poppins', serif;
+  /* display: flex; */
+}
+.card {
+  border-radius: 10px;
+}
+.conten .merk {
+  margin-left: 6rem;
+}
+.conten {
+  margin-left: 1rem;
+  padding: 10px;
+}
+img {
+  margin-left: 3rem;
+  margin-top: 1rem;
+}
+.merk {
+  font-size: 25px;
+}
+.harga {
+  font-weight: bold;
+  /* margin-left: 50px; */
+}
+.card .kondisi {
+  background-color: #ae0909;
+  padding: 3px;
+  border-radius: 10px;
+  color: #fff;
+}
+button {
+  width: 5rem;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #244ec0;
+  color: #fff;
+}
+button:hover {
+  background-color: #fff;
+  color: #244ec0;
+}
+@media screen and (min-width: 768px) {
+
+}
