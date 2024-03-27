@@ -6,6 +6,7 @@ import User from "./component/User/User.js";
 import Footer from "./component/Footer/Footer.js";
 import imgProfile from "./component/gambar.jpg";
 import Main from "./component/Main/Main.js";
+import Movies from "./component/Movies/Movies.js";
 function App() {
   return (
     // props atau kepanjangan dari propertis
@@ -23,6 +24,7 @@ function App() {
      profile={() => alert ("profile ${nama} telah dibuka")}
      >
      </Usernavbar> */}
+     {/* <Movies/> */}
     <Main></Main>
      <Footer nama="Saefulloh"></Footer>
     </div>
