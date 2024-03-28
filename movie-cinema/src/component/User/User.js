@@ -16,13 +16,14 @@
 //   };
 import "./User.css"
 const User = (props) => {
-  const {nama,member,message} = props;
+  const {nama,member,message,gambar} = props;
 // cara style 1 atua css internal
   return (
   <div>
     <ul>
       <table className="card">
         <thead className="card-head">
+          <img src={gambar} alt=""/>
         <tr>
           <td colSpan={2} >{nama}</td>
         </tr>
