@@ -8,7 +8,7 @@ import imgProfile from "./component/gambar.jpg";
 import Main from "./component/Main/Main.js";
 import Movies from "./component/Movies/Movies.js";
 import AddMovieForm from "./component/AddMovieForm/AddMovieForm.js";
-
+import Counter from "./component/Counter/Counter.js";
 function App() {
   return (
     // props atau kepanjangan dari propertis
@@ -28,6 +28,7 @@ function App() {
      </Usernavbar> */}
      {/* <Movies/> */}
     <Main></Main>
+    <Counter/>
      <Footer nama="Saefulloh"></Footer>
     </div>
   );

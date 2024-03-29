@@ -64,7 +64,7 @@ const Main = () => {
      beli={() => alert("Sudah DiBeli")}>
      </Car>
      <Car 
-     merk="BMW M3" 
+     merk="BMW M3" <Counter/>
      harga={2} 
      isNew={true} 
      colors={['Hitam', 'Putih', 'Abu Abu']}
@@ -114,7 +114,7 @@ const Main = () => {
                )
             })
       }
-    <Counter/>
+    
     </div>
   );
 };

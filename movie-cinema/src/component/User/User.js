@@ -40,7 +40,7 @@ const User = (props) => {
           <td><button>Subricribe</button></td>
         </tr>
         </tbody>
-      </table>
+      </table>  
     </ul>
   </div>
   );
