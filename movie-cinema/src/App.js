@@ -1,38 +1,31 @@
-// import './App.css';
-import {Component} from "react";
-import Header from "./component/Navbar/Navbar.js"
-import Car from "./component/Car/Car.js";
-import User from "./component/User/User.js";
-import Footer from "./component/Footer/Footer.js";
-import imgProfile from "./component/gambar.jpg";
-import Main from "./component/Main/Main.js";
-import Movies from "./component/Movies/Movies.js";
-import AddMovieForm from "./component/AddMovieForm/AddMovieForm.js";
-import Counter from "./component/Counter/Counter.js";
+// import Navbar from "./components/Navbar/Navbar";
+// import User from "./components/User/User";
+// import Footer from "./components/Footer/Footer";
+// import Main from "./components/Main/Main";
+// import Car from "./components/Car/Car";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.js";
+import Navbar from "./components/Navbar/Navbar.js";
+import Footer from "./components/Footer/Footer.js";
+import Popular from "./pages/movie/Popular.js";
+import TopReated from "./pages/movie/TopReated.js";
+import Detail from "./pages/movie/Detail.js";
+
 function App() {
   return (
-    // props atau kepanjangan dari propertis
-    <div className="container" >
-      <Header></Header>
-
-     
-     {/* <Usernavbar
-     nama="Udin"
-     alamat="Bandung"
-     angkatan={11}
-     hobis={["Membaca" , "Olahraga"]}
-     isStatus={true}
-     gambar ={imgProfile}
-     profile={() => alert ("profile ${nama} telah dibuka")}
-     >
-     </Usernavbar> */}
-     {/* <Movies/> */}
-    <Main></Main>
-    <Counter/>
-     <Footer nama="Saefulloh"></Footer>
+    <div className="container">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/popular" element={<Popular />} />
+          <Route path="/top" element={<TopReated />} />
+          <Route path="/detail/:id" element={<Detail />} />
+        </Routes>
+        <Footer nama="Saefulloh"/>
+      </BrowserRouter>
     </div>
   );
 }
-
 
 export default App;
