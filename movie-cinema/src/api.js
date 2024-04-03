@@ -9,10 +9,19 @@ export const getMovieList = async () => {
   return movie.data.results;
 };
 
-export const getDetailMovie = async () => {
+
+export const getTopMovie = async () => {
   const movie = await axios.get(
-    `https://api.themoviedb.org/3/movie/823464?api_key=${apiKey}`
+    `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`
   );
 
   return movie.data.results;
+};
+
+export const getDetailMovie = async (id) => {
+  const movie = await axios.get(
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`
+  );
+
+  return movie.data;
 };

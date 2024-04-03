@@ -1,9 +1,9 @@
 import React from "react";
-
+import Main from "../../components/Main/Main";
 const Popular = () => {
   return (
     <div>
-      <h1>Popular</h1>
+      <Main />
     </div>
   );
 };
