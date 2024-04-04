@@ -3,7 +3,6 @@
   background-color: #750e21;
   color: #fff;
   padding: 10px;
-  text-align: center;
 }
 
 .navbar ul {
@@ -34,6 +33,10 @@
 
 /* Medium Screen : 768px */
 @media only screen and (min-width: 768px) {
+  .navbar {
+    padding: 20px;
+    text-align: center;
+  }
   .navbar ul {
     display: flex;
   }
