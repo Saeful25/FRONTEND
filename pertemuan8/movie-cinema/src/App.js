@@ -22,7 +22,7 @@ function App() {
           <Route path="/top" element={<TopReated />} />
           <Route path="/detail/:id" element={<Detail />} />
         </Routes>
-        <Footer nama="Mahardika"/>
+        <Footer nama="Saefulloh"/>
       </BrowserRouter>
     </div>
   );
