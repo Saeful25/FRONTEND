@@ -8,7 +8,7 @@ const DetailCourse = () => {
 
     useEffect(() => {
       getDetailCourses();
-    });
+    }, [id]);
 
     const getDetailCourses = async () => {
       const response = await axios.get(`https://api.sukmax.my.id/course/${id}`);

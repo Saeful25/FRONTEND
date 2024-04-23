@@ -9,6 +9,8 @@ import Register from "./components/Auth/Register";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bulma/css/bulma.css'
 import "./App.css";
+import AddCourse from './components/Course/AddCourse';
+import TableCourse from './components/Course/TableCourse';
 
 
 function App() {
@@ -22,7 +24,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/detail" element={<Detail />} />
-        <Route path="/course/:id" element={<DetailCourses />} />
+        <Route path="/course/:id" element={<DetailCoursesPage />} />
+        <Route path="/course/add" element={<AddCourse />} />
+        <Route path="/table-course" element={<TableCourse/>} />
       </Routes>
       </BrowserRouter>
     </div>
