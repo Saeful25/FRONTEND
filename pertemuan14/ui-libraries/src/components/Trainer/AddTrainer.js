@@ -3,11 +3,11 @@ import axios from "axios";
 import Layout from '../Layout';
 import { useNavigate ,NavLink } from "react-router-dom";
 
-const AddCourse = () => {
+const AddTrainer = () => {
 const  [name, setName] = useState("");
-const [trainer_id, setTrainerId] = useState(1);
-const [desc,setDesc] = useState("");
-const [ file, setFile] = useState("");
+const [address, setAddress] = useState(1);
+const [skill,setSkill] = useState("");
+const [file, setFile] = useState("");
 const [preview, setPreview] = useState("");
 const navigate = useNavigate("");
 
@@ -16,17 +16,17 @@ const navigate = useNavigate("");
     setFile(image);
     setPreview(URL.createObjectURL(image));
   }
-  const saveCourse = async (e) => {
+  const saveTrainer = async (e) => {
     // preventDefault supaya tidak merefresh halaman
     e.preventDefault();
      try {
        await axios.post(
-        "https://api.sukmax.my.id/course",
+        "https://api.sukmax.my.id/trainer",
         
     {
          name: name,
-         trainer_id: trainer_id,
-         desc: desc,
+         address: address,
+         skill: skill,
           file: file,
     //   // yang pertama adalah key 
     //   // yang kedua adalah value diambil dari state
@@ -38,46 +38,36 @@ const navigate = useNavigate("");
       }
     }
   );
-  // redirect ke /table-course
-  navigate("/table-course");
+  // redirect ke /table-trainer
+  navigate("/table-trainer");
     }catch(error) {
       console.log(error);
     }
-    // try {
-    //   const formData = new FormData();
-    //   formData.append("name", name);
-    //   formData.append("trainer_id", trainer_id);
-    //   formData.append("desc", desc);
-    //   formData.append("file", file);
-    //   await axios.post("https://api.sukmax.my.id/course", formData);
-    // }catch(error) {
-    //   console.log(error);
-    // }
   };
   return (
 <Layout>
-  <h2 className='title'>Courses</h2>
-  <h3 class="subtitle">Add Course</h3>
-  <form onSubmit={saveCourse}>
+  <h2 className='title'>Trainers</h2>
+  <h3 class="subtitle">Add Trainer</h3>
+  <form onSubmit={saveTrainer}>
   <div>
       <div class="field">
   <label class="label">Name</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Masukan Nama Course" onChange={(e) => setName(e.target.value)} />
+    <input class="input" type="text" placeholder="Masukan Nama Trainer" onChange={(e) => setName(e.target.value)} />
   </div>
 </div>
 
 <div class="field">
-  <label class="label">trainer_id</label>
+  <label class="label">Address</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Trainer Id" onChange={(e) => setTrainerId(e.target.value)}/>
+    <input class="input " type="text" placeholder="Address" onChange={(e) => setAddress(e.target.value)}/>
   </div>
 </div>
 
 <div class="field">
-  <label class="label">Message</label>
+  <label class="label">Skill</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea" onChange={(e) => setDesc(e.target.value)}></textarea>
+    <textarea class="textarea" placeholder="Textarea" onChange={(e) => setSkill(e.target.value)}></textarea>
   </div>
 </div>
 <div class="file">
@@ -105,7 +95,7 @@ const navigate = useNavigate("");
     <button type="submit" class="button is-link">Submit</button>
   </div>
   <div class="control">
-    <NavLink to="/table-course" className="button is-link is-light">Cancel</NavLink>
+    <NavLink to="/table-trainer" className="button is-link is-light">Cancel</NavLink>
   </div>
 </div>
     </div>
@@ -117,4 +107,4 @@ const navigate = useNavigate("");
     )
 }
 
-export default AddCourse;
+export default AddTrainer;

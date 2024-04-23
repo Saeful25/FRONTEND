@@ -45,7 +45,7 @@ function NavbarComponent(args) {
           </Nav>
           <NavLink
             to={"/login"}
-            className="text-light mx-3 button is-light text-dark"
+            className="text-light mx-3 button is-warning text-dark"
             style={{ textDecoration: "none" }}
           >
             Login
